@@ -12,11 +12,8 @@ import {
   CssBaseline,
 } from '@material-ui/core';
 import useStyles from '../utils/styles';
-import { Store } from '../utils/Store';
 
 export default function Layout({ children, title, description }) {
-  const { state, dispatch } = useContext(Store);
-  const { darkMode } = state;
   const theme = createTheme({
     typography: {
       h1: {
@@ -28,15 +25,6 @@ export default function Layout({ children, title, description }) {
         fontSize: '1.4rem',
         fontWeight: 400,
         margin: '1rem 0',
-      },
-    },
-    palette: {
-      type: 'light',
-      primary: {
-        main: '#f0c000',
-      },
-      secondary: {
-        main: '#208080',
       },
     },
   });
